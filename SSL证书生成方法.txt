@@ -1,3 +1,4 @@
 keytool -genkey -alias server -keyalg RSA -keystore server.jks -storepass server@123 -keypass server@123
 keytool -export -alias server -keystore server.jks -file server.crt -storepass server@123
-keytool -import -keystore F:/"Program Files"/Java/jdk1.8.0_05/jre/lib/security/cacerts -file server.crt -alias server -storepass server@123
+#jdk keystorepass default  password changeit
+keytool -import -keystore F:/"Program Files"/Java/jdk1.8.0_05/jre/lib/security/cacerts -file server.crt -alias server -trustcacerts -storepass changeit
